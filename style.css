@@ -1,0 +1,167 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Mobile-first Background */
+.background-overlay {
+  background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.background-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+.login-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
+}
+
+/* Box */
+.login-box {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  border-color: #4facfe;
+  outline: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4facfe;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #00c6ff;
+}
+
+/* Social Login */
+.separator {
+  margin: 15px 0;
+  color: #888;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.social-login a {
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.google {
+  background-color: #db4437;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.social-login a:hover {
+  opacity: 0.85;
+}
+
+/* Note */
+.note {
+  font-size: 13px;
+}
+
+.note a {
+  color: #4facfe;
+  text-decoration: none;
+}
+
+/* Desktop Enhancements */
+@media (min-width: 600px) {
+  .social-login {
+    flex-direction: row;
+  }
+
+  .login-box {
+    padding: 30px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+  }
+
+  .note {
+    font-size: 14px;
+  }
+}
